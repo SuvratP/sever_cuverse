@@ -11,6 +11,8 @@ import AuthRoute from "./Routes/AuthRoute.js";
 import UserRoute from "./Routes/UserRoute.js";
 import PostRoute from "./Routes/PostRoute.js";
 import UploadRoute from "./Routes/UploadRoute.js";
+import ChatRoute from './Routes/ChatRoute.js';
+import MessageRoute from './Routes/MessageRoute.js'
 
 // Setup __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -34,6 +36,9 @@ app.use("/auth", AuthRoute);
 app.use("/user", UserRoute);
 app.use("/post", PostRoute);
 app.use("/upload", UploadRoute);
+app.use("/chat",ChatRoute)
+app.use('/Message',MessageRoute)
+
 
 // ======= Serve React Frontend in Production (Render) =======
 app.use(express.static(path.join(__dirname, "../client/build")));
