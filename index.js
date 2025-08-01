@@ -41,10 +41,10 @@ app.use('/Message',MessageRoute)
 
 
 // ======= Serve React Frontend in Production (Render) =======
-app.use(express.static(path.join(__dirname, "../client/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
+// app.use(express.static(path.join(__dirname, "../client/build")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+// });
 
 
 // ======= MongoDB Connection & Server Start =======
